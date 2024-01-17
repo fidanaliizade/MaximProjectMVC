@@ -1,7 +1,7 @@
 ﻿@using MaximProject.Areas.Manage.ViewModels
 @model ServicesUpdateVM
 
-<form>
+<form method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label asp-for="Title" class="form-label">Title </label>
         <input asp-for="Title" class="form-control">

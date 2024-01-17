@@ -34,12 +34,12 @@ namespace MaximProject.Areas.Manage.Controllers
             Service service = new Service()
             {
                 Title = vm.Title,
-                Description = vm.Description,
+                Description = vm.Description
 
             };
             await _db.Services.AddAsync(service);
             await _db.SaveChangesAsync();   
-            return View();
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Update(int id)
